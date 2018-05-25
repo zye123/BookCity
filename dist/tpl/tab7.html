@@ -1,0 +1,17 @@
+<!--限时免费  -->
+<div class="free_theTime">
+    <h2>{{data5.ad_name}}</h2>
+    <div>
+        {{#each data5.data.data}}
+        <a href="/page/detail.html?activeid={{data.fiction_id}}">
+            <dl>
+                <dt><img class="lazy" data-original="{{data.book_cover}}" alt=""></dt>
+                <dd>
+                    <span>{{ad_name}}</span>
+                </dd>
+            </dl>
+        </a>
+        {{/each}}
+    </div>
+    <p><span>更多限免佳作>></span></p>
+</div>

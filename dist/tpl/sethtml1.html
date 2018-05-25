@@ -1,0 +1,9 @@
+<a href="javascript">
+    <ul class="list">
+        {{#each ads}} {{#if status}}
+        <li>{{ad_name}}</li>
+        {{else}}
+        <li class="active">{{ad_name}}</li>
+        {{/if}} {{/each}}
+    </ul>
+</a>

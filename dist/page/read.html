@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http - equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="css1/read.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <!--阅读内容-->
+        <div class="book-cont">
+
+        </div>
+        <!-- 目录遮罩层 -->
+        <div class="book-mask">
+            <header class="head">
+                <span><a href="javascript">></a>返回</span>
+                <span>···</span>
+            </header>
+            <footer>
+                <div class="f_top">
+                    <span class="prev">上一章</span>
+                    <span class="menu-list">10/66</span>
+                    <span class="next">下一章</span>
+                </div>
+                <div class="f_bottom">
+                    <div class="font-dialog">
+                        <div class="font-se">
+                            <b>字号</b><button class="font-large">大</button><button class="font-small">小</button>
+                        </div>
+                        <div class="font-back">
+                            <b>背景</b>
+                            <ul class="col">
+                                <li style="background:#f7eee5;" class="one border_color"></li>
+                                <li style="background:#e9dfc7;" class="two"></li>
+                                <li style="background:#a4a4a4;" class="three"></li>
+                                <li style="background:#cdefce;" class="four"></li>
+                                <li style="background:#283548;" class="five"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="test">
+                        <li class="mulu">目录</li>
+                        <li class="font">字体</li>
+                        <li class="day">白天</li>
+                        <li>下载</li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+        <div class="menu-dialog">
+            <header class="header">
+                <span class="back"><b>></b>目录</span>
+                <span>#</span>
+            </header>
+            <div class="mains">
+
+            </div>
+        </div>
+    </div>
+    <script src="../js/lib/require.js"></script>
+    <script src="../js/lib/jquery.js"></script>
+    <script class="tpl" type="text/x-handlebars-template">
+        <h3>{{t}}</h3>
+        <ul class="list">
+            {{#each p}}
+            <li class='li'>{{this}}</li>
+            {{/each}}
+        </ul>
+    </script>
+    <script class="tels" type="text/x-handlebars-template">
+        <ul class='test'>
+            {{#each list}}
+            <li data-id='{{chapter_id}}'>{{title}}</li>
+            {{/each}}
+        </ul>
+    </script>
+    <script>
+        require(['../js/main'], function() {
+            require(['read']);
+        });
+    </script>
+</body>
+
+</html>

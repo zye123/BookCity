@@ -1,0 +1,15 @@
+<!--本周最火  -->
+<div class="week-hot">
+    <h2>{{data1.ad_name}}</h2>
+    <div>
+        {{#each data1.data.data}}
+        <a href="/page/detail.html?activeid={{fiction_id}}">
+            <dl>
+                <dt><img class="lazy" data-original="{{cover}}" alt=""></dt>
+                <dd>{{title}}</dd>
+            </dl>
+        </a>
+        {{/each}}
+    </div>
+    <p>查看更多</p>
+</div>

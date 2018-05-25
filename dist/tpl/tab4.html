@@ -1,0 +1,28 @@
+<!--重磅推荐  -->
+<div class="recommend">
+    <h2>{{data2.ad_name}}<span>男|女</span></h2>
+    <ul>
+        {{#iflength data2.data.data}}{{#each this}}{{#if @index}}
+        <li class="recom_two">
+            <b>0{{@index}}</b>
+            <font>{{title}}</font><span>{{authors}}</span>
+        </li>
+        {{else}}
+        <li class="recom_one">
+            <dl>
+                <dt><img class="lazy" data-original="{{cover}}" alt="">{{#if finish}}<span>{{完结}}{{else}}{{连载中}}</span>{{/if}}</dt>
+                <dd>
+                    <h3>{{title}}</h3>
+                    <p>{{authors}}</p>
+                    <p>{{summary}}</p>
+                    <p>
+                        {{#each tags}}
+                        <span>{{this}}</span> {{/each}}
+                    </p>
+                </dd>
+            </dl>
+        </li>
+        {{/if}}{{/each}} {{/iflength}}
+    </ul>
+    <p><span>换一换</span><span>查看全部</span></p>
+</div>

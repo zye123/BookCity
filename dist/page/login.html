@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http - equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="css2/style1.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form class="user_login">
+        <label for="">用户名：</label>
+        <input type="text" class="text" placeholder="用户名/手机号/邮箱">
+        <label for="">密码：</label>
+        <input type="password" class="pwd" placeholder="请输入密码">
+        <p class="tip"></p>
+        <button class="btn" type="button">登陆</button>
+    </form>
+    <script src="../js/lib/require.js"></script>
+    <script>
+        require(['../js/main'], function() {
+            require(['login']);
+        });
+    </script>
+</body>
+
+</html>
